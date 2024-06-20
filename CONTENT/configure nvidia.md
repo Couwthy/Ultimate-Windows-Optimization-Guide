@@ -17,6 +17,13 @@ setup.exe
 <file name="${{FunctionalConsentFile}}"/>
 <file name="${{PrivacyPolicyFile}}"/>
  ```
+
+- Open CMD and enter the command below to disable telemetry
+
+    ```bat
+    reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\Startup\SendTelemetryData" /t REG_DWORD /d "0" /f
+    ```
+
 - Run the setup.exe file and install the driver.
 
 ### Setting MSI Afterburner
@@ -38,6 +45,14 @@ Frequency lock / P-State0
 - This path will not be identical in all cases, the number 0000 is specific to a particular video card and may be overwritten when installing drivers or moving the GPU to a different slot. To determine the appropriate reference number (e.g. 0000, 0001, 0002), open the registry editor and navigate to the path below, then look at the "DriverDesc or HardwareInformation.AdapterString" values, which should contain the adapter name of the graphics card, e.g. NVIDIA GeForce GTX 1050. (timecard).
 
 - Once you know your path, then create a file of type REG.DWORD named DisableDynamicPstate and set the value to 1.
+
+## Lock GPU Clocks/P-State 0
+
+Force P-State 0 with the [registry key](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/WINDRIVERS/README.md#q-is-there-a-registry-setting-that-can-force-your-display-adapter-to-remain-at-its-highest-performance-state-pstate-p0) below (reboot required). Ensure to change the driver key to the one that corresponds to the correct NVIDIA GPU ([example](/assets/images/find-driver-key-example.png)). This mitigates the undesirable delay to execute new instructions when the unit enters a deeper power-saving state at the expense of higher idle temperatures and power consumption
+
+```bat
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000" /v "DisableDynamicPstate" /t REG_DWORD /d "1" /f
+```
 
 # Configure NVIDIA Control Panel
 
@@ -72,6 +87,8 @@ Frequency lock / P-State0
 - Dynamic range - Full
 
 ## Game Config setting
+
+> [!CAUTION]
  ```
 Windows Registry Editor Version 5.00
 
@@ -391,5 +408,7 @@ Windows Registry Editor Version 5.00
  ```
 
 ## Configure NVIDIA Inspector
+> [!CAUTION]
+> 📊 **Do not** blindly follow the recommendations in this section. **Do** benchmarks of said changes to ensure that they result in positive performance gains, as every system behaves differently and changes can unintentionally degrade performance.
 
 - Download and extract [NVIDIA Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector) Please download my [personal profile](https://drive.google.com/file/d/18PiWZ9HR8BPmGbdr5MyJzn8fwDlbCoxW/view?usp=sharing) and apply it.
