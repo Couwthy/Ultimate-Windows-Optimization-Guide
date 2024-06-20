@@ -132,6 +132,23 @@ For more information about Network Throttling Index and its effect on NDIS DPC p
 
 - Open cmd as administrator and enter the following commands:
 
+## IP Settings
+ ```
+netsh winsock reset catalog 
+netsh int ip reset c:resetlog.txt 
+netsh int ip reset C:\tcplog.txt
+netsh int tcp set heuristics disabled
+netsh int tcp set supplemental Internet congestionprovider=ctcp
+netsh int tcp set global rsc=disabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global chimney=enabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+netsh int tcp set global autotuninglevel=disabled
+netsh advfirewall firewall add rule name="Block Windows Telemetry" dir=in action=block remoteip=134.170.30.202,137.116.81.24,157.56.106.189,184.86.53.99,2.22.61.43,2.22.61.66,204.79.197.200,23.218.212.69,65.39.117.23,65.55.108.23,64.4.54.254 enable=yes
+netsh advfirewall firewall add rule name="Block NVIDIA Telemetry" dir=in action=block remoteip=8.36.80.197,8.36.80.224,8.36.80.252,8.36.113.118,8.36.113. 141,8.36.80.230,8.36.80.231,8.36.113.126,8.36.80.195,8.36.80.217,8.36.80.237,8.36.80.246,8.36.113.116,8.36.113.139,8.36.80.244,216.228.121.209 enable=yes
+ ```
+
 ## Security concerns
  ```
 netsh int ip set global taskoffload=enabled
@@ -139,6 +156,31 @@ netsh int ip set global dhcpmediasense=disabled
 netsh int ip set global mediasenseeventlog=disabled
 netsh int ip set global icmpredirects= disabled
  ```
+## TCP settings
+ ```
+netsh int tcp set supplemental template=custom icw=10
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set global rsc=disabled
+netsh int tcp set global dca=enabled
+netsh int tcp set global netdma=disabled
+netsh int tcp set heuristics disabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global dca=enabled
+netsh int tcp set global netdma=disabled
+netsh int tcp set global rsc=disabled
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global ecn=disabled
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set global maxsynretransmissions=2
+netsh int tcp set global fastopen=enabled
+netsh int tcp set global fastopenfallback=enabled
+netsh int tcp set global rss=enabled
+netsh int tcp set global hystart=enabled
+netsh int tcp set global initialRto=2000
+ ```
+
 ## Disable ICMP Redirects for security
  ```
 netsh int tcp set global chimney=enabled
@@ -150,6 +192,35 @@ netsh int tcp set global timestamps=disabled
 netsh int tcp set global ecncapability=disabled
 netsh interface teredo set state disabled
 netsh int isatap set state disable
+ ```
+
+## UDP settings
+ ```
+netsh int udp set global uro=enabled
+ ```
+
+## IPv6 settings
+ ```
+netsh interface teredo set state disabled
+netsh int isatap set state disable
+netsh int ipv6 isatap set state disabled
+netsh int ipv6 6to4 set state disabled
+netsh interface IPV6 set global randomizeidentifier=disabled
+netsh interface IPV6 set privacy state=disabled
+ ```
+
+## Get the interface name
+ ```
+$INTERFACE = (netsh int ip show interfaces | Select-String -Pattern '0-9' | % { $_.Matches[0].Value })[0]
+netsh int ip set interface $INTERFACE dadtransmits=1 routerdiscovery=disabled ecncapability=ecndisabled store=persistent
+netsh int tcp set heuristics disabled
+netsh int tcp set heuristics wsh=disabled
+netsh int tcp set security mpp=disabled
+netsh int tcp set security profiles=disabled >nul
+netsh int ipv4 set dynamicport tcp start=1025 num=645111
+netsh int ipv4 set dynamicport udp start=1025 num=64511
+netsh int ip set global icmpredirects=disabled
+netsh int ip set global multicastforwarding=disabled
  ```
 
 ### Tips
