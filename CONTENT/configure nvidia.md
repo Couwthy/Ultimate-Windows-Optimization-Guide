@@ -19,6 +19,12 @@ setup.exe
  ```
 - Run the setup.exe file and install the driver.
 
+### Setting MSI Afterburner
+
+- In MSI Afterburner program you need to turn off limits or increase them to maximum and turn on stable voltages, voltage monitoring and remember the video card model. After in the browser find the passport frequency boost and memorize it. 
+
+- In the program MSI Afterburner enable key boost, for which you need to put the skin [EVGA SKIN](https://drive.google.com/file/d/1buaP5Gv7f3Jv3OPQzKWF6Q7fSvxft2a0/view?usp=sharing). To do this, download the archive with the skins folder and copy the default file to the skins folder. After rebooting the computer, select the skin and enable keyboost.
+
 ### Setting up the video driver
 
 - If you need the NVIDIA control panel to customize 3D settings, you may be missing data. There is a point in touching it only if you are using G-SYNC. All 3D settings are useless. Change the remaining settings in other sections as needed.
@@ -65,6 +71,325 @@ Frequency lock / P-State0
 
 - Dynamic range - Full
 
+## Game Config setting
+ ```
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_Enabled"=dword:00000000
+"GameDVR_FSEBehavior"=dword:00000002
+"GameDVR_FSEBehaviorMode"=dword:00000002
+"GameDVR_HonorUserFSEBehaviorMode"=dword:00000001
+"GameDVR_DXGIHonorFSEWindowsCompatible"=dword:00000001
+"GameDVR_EFSEFeatureFlags"=dword:00000000
+"Win32_AutoGameModeDefaultProfile"=hex:01,00,01,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00
+"Win32_GameModeRelatedProcesses"=hex:01,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"AllowAutoGameMode"=dword:00000000
+"AutoGameModeEnabled"=dword:00000000
+"GamePanelStartupTipIndex"=dword:00000003
+"ShowStartupPanel"=dword:00000000
+"UseNexusForGameBarEnabled"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR]
+"value"=dword:00000000
+
+[-HKEY_CURRENT_USER\SYSTEM\GameConfigStore\Children]
+[-HKEY_CURRENT_USER\SYSTEM\GameConfigStore\Parents]
+ ```
+
+## Setting up Nvidia Dwords
+ ```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\NVIDIA Corporation\Global\Startup\SendTelemetryData]
+@=dword:00000000
+
+[HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\Startup]
+"SendTelemetryData"=dword:00000000
+
+[HKLM\SOFTWARE\NVIDIA Corporation\Global\NVTweak]
+"DisplayPowerSaving"=dword:00000000
+
+[HKLM\SYSTEM\ControlSet001\Services\nvlddmkm\Global\NVTweak]
+"DisplayPowerSaving"=dword:00000000
+
+[HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\NVTweak]
+"DisplayPowerSaving"=dword:00000000
+
+[HKLM\SOFTWARE\NVIDIA Corporation\NvControlPanel2\Client]
+"OptInOrOutPreference"=dword:00000000
+
+[HKLM\SYSTEM\ControlSet001\Services\nvlddmkm\FTS]
+"EnableGR535"=dword:00000000
+"EnableRID44231"=dword:00000000
+"EnableRID64640"=dword:00000000
+"EnableRID66610"=dword:00000000
+
+[HKLM\SYSTEM\ControlSet001\Services\nvlddmkm]
+"EnableMidBufferPreemption"=dword:00000000
+"DisableCudaContextPreemption"=dword:00000001
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"ComputePreemption"=dword:00000000
+"DisablePreemption"=dword:00000001
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"DisableBugcheckCallback"=dword:00000001
+"LogWarningEntries"=dword:00000000
+"LogPagingEntries"=dword:00000000
+"LogEventEntries"=dword:00000000
+"LogErrorEntries"=dword:00000000
+
+[HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm]
+"EnableMidBufferPreemption"=dword:00000000
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"ComputePreemption"=dword:00000000
+"DisablePreemption"=dword:00000001
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"DisableBugcheckCallback"=dword:00000001
+"LogWarningEntries"=dword:00000000
+"LogPagingEntries"=dword:00000000
+"LogEventEntries"=dword:00000000
+"LogErrorEntries"=dword:00000000
+
+[HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler]
+"DisableWriteCombining"=dword:00000001
+"EnablePreemption"=dword:00000000
+
+[HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
+"EnablePreemption"=dword:00000000
+"IOMMUFlags"=dword:00000000
+"DisableMultiSourceMPOCheck"=dword:00000001
+"DisableOverlays"=dword:00000001 
+"EnableDecodeMPO"=dword:00000000
+"PowerSavingTweaks"=dword:00000000
+
+[HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power]
+"ComputePreemption"=dword:00000000
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"EnableAsyncMidBufferPreemption"=dword:00000000
+"EnableSCGMidBufferPreemption"=dword:00000000
+"PerfAnalyzeMidBufferPreemption"=dword:00000000
+"EnableMidGfxPreemption"=dword:00000000
+"EnableMidBufferPreemption"=dword:00000000
+"EnableCEPreemption"=dword:00000000
+"EnablePreemption"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\NVTweak]
+"NvCplAllowWinSatAssessment"=dword:00000000
+"NvCplPhysxAuto"=dword:00000000
+"NvDevToolsVisible"=dword:00000001
+"RmProfilingAdminOnly"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\nvlddmkm]
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidGfxpSharedBuffer"=dword:00000000
+"EnableMidGfxPreemption"=dword:00000000
+"PerfAnalyzeMidBufferPreemption"=dword:00000000
+"EnableSCGMidBufferPreemption"=dword:00000000
+"EnableAsyncMidBufferPreemption"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"EnableCEPreemption"=dword:00000000
+"EnableMidBufferPreemption"=dword:00000000
+"DisablePreemption"=dword:00000001
+"DisableWriteCombining"=dword:00000001
+"EnableAsyncMidBufferPreemption"=dword:00000001
+"EnableBugcheckDisplay"=dword:00000000
+"EnableBugcheckTinting"=dword:00000000
+"EnableIoMmu"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000001
+"EnableMidBufferPreemption"=dword:00000001
+"EnableMidGfxPreemption"=dword:00000001
+"EnablePageFaultDebugOutput"=dword:00000000
+"EnablePerformanceMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
+"RMAERRForceDisable"=dword:00000001
+"RMNoECCFuseCheck"=dword:00000001
+"RMDisableRCOnDBE"=dword:00000001
+"RM1441072"=dword:00000001
+"RMAERRHandling"=dword:00000000
+"DisableBlockWrite"=dword:00000000
+"ComputePreemption"=dword:00000000
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"EnableAsyncMidBufferPreemption"=dword:00000000
+"EnableSCGMidBufferPreemption"=dword:00000000
+"PerfAnalyzeMidBufferPreemption"=dword:00000000
+"EnableMidGfxPreemption"=dword:00000000
+"EnableMidBufferPreemption"=dword:00000000
+"EnableCEPreemption"=dword:00000000
+"EnablePreemption"=dword:00000000
+"ACGSupported"=dword:00000000
+"DisableAsyncPstates"=dword:00000001
+"DisableDynamicPstate"=dword:00000001
+"DisableOverclockedPstates"=dword:00000000
+"TrackResetEngine"=dword:00000000
+"EnablePerformanceMode"=dword:00000001
+"RMEnableEventTracer"=dword:00000000
+"RMEnableOverclockingAllPstates"=dword:00000001
+"RmMIONoPowerOff"=dword:00000001
+"RmProfilingAdminOnly"=dword:00000000
+"TCCSupported"=dword:00000000
+"VRRAlwaysON"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001]
+"RMAERRForceDisable"=dword:00000001
+"RMNoECCFuseCheck"=dword:00000001
+"RMDisableRCOnDBE"=dword:00000001
+"RM1441072"=dword:00000001
+"RMAERRHandling"=dword:00000000
+"DisableBlockWrite"=dword:00000000
+"ComputePreemption"=dword:00000000
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"EnableAsyncMidBufferPreemption"=dword:00000000
+"EnableSCGMidBufferPreemption"=dword:00000000
+"PerfAnalyzeMidBufferPreemption"=dword:00000000
+"EnableMidGfxPreemption"=dword:00000000
+"EnableMidBufferPreemption"=dword:00000000
+"EnableCEPreemption"=dword:00000000
+"EnablePreemption"=dword:00000000
+"ACGSupported"=dword:00000000
+"DisableAsyncPstates"=dword:00000001
+"DisableDynamicPstate"=dword:00000001
+"DisableOverclockedPstates"=dword:00000000
+"TrackResetEngine"=dword:00000000
+"EnablePerformanceMode"=dword:00000001
+"RMEnableEventTracer"=dword:00000000
+"RMEnableOverclockingAllPstates"=dword:00000001
+"RmMIONoPowerOff"=dword:00000001
+"RmProfilingAdminOnly"=dword:00000000
+"TCCSupported"=dword:00000000
+"VRRAlwaysON"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0002]
+"RMAERRForceDisable"=dword:00000001
+"RMNoECCFuseCheck"=dword:00000001
+"RMDisableRCOnDBE"=dword:00000001
+"RM1441072"=dword:00000001
+"RMAERRHandling"=dword:00000000
+"DisableBlockWrite"=dword:00000000
+"ComputePreemption"=dword:00000000
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"EnableAsyncMidBufferPreemption"=dword:00000000
+"EnableSCGMidBufferPreemption"=dword:00000000
+"PerfAnalyzeMidBufferPreemption"=dword:00000000
+"EnableMidGfxPreemption"=dword:00000000
+"EnableMidBufferPreemption"=dword:00000000
+"EnableCEPreemption"=dword:00000000
+"EnablePreemption"=dword:00000000
+"ACGSupported"=dword:00000000
+"DisableAsyncPstates"=dword:00000001
+"DisableDynamicPstate"=dword:00000001
+"DisableOverclockedPstates"=dword:00000000
+"TrackResetEngine"=dword:00000000
+"EnablePerformanceMode"=dword:00000001
+"RMEnableEventTracer"=dword:00000000
+"RMEnableOverclockingAllPstates"=dword:00000001
+"RmMIONoPowerOff"=dword:00000001
+"RmProfilingAdminOnly"=dword:00000000
+"TCCSupported"=dword:00000000
+"VRRAlwaysON"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0003]
+"RMAERRForceDisable"=dword:00000001
+"RMNoECCFuseCheck"=dword:00000001
+"RMDisableRCOnDBE"=dword:00000001
+"RM1441072"=dword:00000001
+"RMAERRHandling"=dword:00000000
+"DisableBlockWrite"=dword:00000000
+"ComputePreemption"=dword:00000000
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"EnableAsyncMidBufferPreemption"=dword:00000000
+"EnableSCGMidBufferPreemption"=dword:00000000
+"PerfAnalyzeMidBufferPreemption"=dword:00000000
+"EnableMidGfxPreemption"=dword:00000000
+"EnableMidBufferPreemption"=dword:00000000
+"EnableCEPreemption"=dword:00000000
+"EnablePreemption"=dword:00000000
+"ACGSupported"=dword:00000000
+"DisableAsyncPstates"=dword:00000001
+"DisableDynamicPstate"=dword:00000001
+"DisableOverclockedPstates"=dword:00000000
+"TrackResetEngine"=dword:00000000
+"EnablePerformanceMode"=dword:00000001
+"RMEnableEventTracer"=dword:00000000
+"RMEnableOverclockingAllPstates"=dword:00000001
+"RmMIONoPowerOff"=dword:00000001
+"RmProfilingAdminOnly"=dword:00000000
+"TCCSupported"=dword:00000000
+"VRRAlwaysON"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0004]
+"RMAERRForceDisable"=dword:00000001
+"RMNoECCFuseCheck"=dword:00000001
+"RMDisableRCOnDBE"=dword:00000001
+"RM1441072"=dword:00000001
+"RMAERRHandling"=dword:00000000
+"DisableBlockWrite"=dword:00000000
+"ComputePreemption"=dword:00000000
+"EnableMidGfxPreemptionVGPU"=dword:00000000
+"EnableMidBufferPreemptionForHighTdrTimeout"=dword:00000000
+"EnableAsyncMidBufferPreemption"=dword:00000000
+"EnableSCGMidBufferPreemption"=dword:00000000
+"PerfAnalyzeMidBufferPreemption"=dword:00000000
+"EnableMidGfxPreemption"=dword:00000000
+"EnableMidBufferPreemption"=dword:00000000
+"EnableCEPreemption"=dword:00000000
+"EnablePreemption"=dword:00000000
+"ACGSupported"=dword:00000000
+"DisableAsyncPstates"=dword:00000001
+"DisableDynamicPstate"=dword:00000001
+"DisableOverclockedPstates"=dword:00000000
+"TrackResetEngine"=dword:00000000
+"EnablePerformanceMode"=dword:00000001
+"RMEnableEventTracer"=dword:00000000
+"RMEnableOverclockingAllPstates"=dword:00000001
+"RmMIONoPowerOff"=dword:00000001
+"RmProfilingAdminOnly"=dword:00000000
+"TCCSupported"=dword:00000000
+"VRRAlwaysON"=dword:00000000
+ ```
+
 ## Configure NVIDIA Inspector
 
-- Download and extract [NVIDIA Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector) Please download my [personal profile](https://drive.google.com/file/d/1gAX-wmDWFIAM-yqWD90u6LfGKK_VEm48/view?usp=sharing) and apply it.
+- Download and extract [NVIDIA Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector) Please download my [personal profile](https://drive.google.com/file/d/18PiWZ9HR8BPmGbdr5MyJzn8fwDlbCoxW/view?usp=sharing) and apply it.
