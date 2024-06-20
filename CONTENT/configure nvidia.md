@@ -19,7 +19,7 @@ setup.exe
  ```
 - Run the setup.exe file and install the driver.
 
-### Настройка видеодрайвера
+### Setting up the video driver
 
 - If you need the NVIDIA control panel to customize 3D settings, you may be missing data. There is a point in touching it only if you are using G-SYNC. All 3D settings are useless. Change the remaining settings in other sections as needed.
  ```
